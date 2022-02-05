@@ -11,45 +11,47 @@
 <body>
     <div>
         <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3 " id="menuNav">
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="#">Navbar</a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                      </li>
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Dropdown
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="#">Action</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
-                      </li>
-                    </ul>
-                    <form class="d-flex">
-                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                      <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                  </div>
+                    <a class="navbar-brand border border-2 rounded-pill p-2" href="./pages/perfilBoot.html" "> 
+                        <img src="./img/imguserlogo.jpeg" alt="" width="40" height="40" class=" rounded-circle" >
+                        Lucas Parra
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <div class="navbar-nav ms-auto">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                            <a class="nav-link" href="./pages/herramientasBoot.html">Herramientas</a>
+                            <a class="nav-link" href="./pages/">Proyectos</a>
+                            <a class="nav-link" href="./pages/contactoBoot.html">Contacto</a>
+                        </div>
+                    </div>
                 </div>
               </nav>
         </header>
         <main>
-
+            <section class=" p-3 border rounded-start">
+                <div class=" ">
+                    <h1 class="">HOLA, SOY LUCAS.</h1>
+                    <p class="">
+                        Me alegro de poder verte por aqui, en esta pagina te voy a enseñar un poco sobre quien soy y que me encuentro estudiando.
+                     </p>
+                        <span>
+                            A continuacion te brindo un boton para que puedas descargar mi curriculum.
+                        </span>
+                    </br>
+                        
+                    </p>
+                    <button class="rounded-pill">
+                        Descargar Curriculum
+                    </button>
+                </div>
+                <span class="p-3 m-3 col-md">
+                    <img src="./img/imgprueba.jpeg" class=" rounded-circle " alt="imagen de section" width="300em">
+                </span>
+            </section>
         </main>
         <footer>
 
