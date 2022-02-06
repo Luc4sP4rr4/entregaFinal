@@ -19,17 +19,72 @@ body {
     position: fixed;
     margin: 0;
     width: 100%;
-    height: 100px; }
+    height: 100px;
+    display: flex; }
     body header nav {
       display: flex;
       justify-content: space-between;
-      padding: 10px 10px; }
-      body header nav a div img {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        border: 4px solid #55443366;
-        pointer-events: none; }
+      align-items: center;
+      padding: 10px;
+      width: 100%; }
+      body header nav div {
+        position: relative; }
+        body header nav div a div {
+          background-color: #c4abff;
+          padding: 2px;
+          margin: 2px;
+          border-radius: 10px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          transition: .2s; }
+          body header nav div a divafter, body header nav div a div:hover {
+            filter: brightness(85%); }
+          body header nav div a div img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 4px solid #55443366;
+            pointer-events: none; }
+          body header nav div a div div {
+            padding: 2px;
+            margin: 2px;
+            pointer-events: none;
+            color: black; }
+      body header nav div {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: 10px; }
+        body header nav div span {
+          pointer-events: all;
+          cursor: pointer;
+          margin-top: 10px; }
+          body header nav div span i {
+            padding: 2px;
+            margin: 2px;
+            color: #c4abff; }
+        body header nav div ul {
+          height: 0;
+          margin: 20px -100% 0 0;
+          overflow: hidden;
+          transition: all 0.3s; }
+          body header nav div ul a {
+            text-decoration: none;
+            color: #c8c8c8; }
+            body header nav div ul a li {
+              list-style: none;
+              padding: 20px;
+              margin: 5px;
+              border: 3px solid #c4abff;
+              border-radius: 50px;
+              display: block;
+              font-size: 1.25em;
+              cursor: pointer;
+              background: #1a0554;
+              text-align: center;
+              text-transform: uppercase; }
   body main {
     grid-area: main;
     background-color: #664eae;
@@ -48,9 +103,19 @@ body {
       body main section div {
         display: flex;
         justify-content: center; }
+        body main section div button {
+          margin: 2em; }
+      body main section img {
+        width: 250px;
+        margin: 2em; }
   body footer {
     grid-area: footer;
     background-color: #c4abff; }
     body footer div {
       padding: 25px;
       text-align: center; }
+
+.mostrarMenu {
+  margin-right: 0;
+  pointer-events: all;
+  overflow: visible; }

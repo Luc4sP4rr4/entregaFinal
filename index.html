@@ -9,45 +9,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <title>Document</title>
 </head>
 <body>
     
         <header>
-            <nav class="nav_header">
+            <nav >
                 <!-- perfil -->
-                <a href="./pages/perfil.html" class="a__userlogo">
-                    <div class="nav__userlogo" title="ir a perfil">
-                        <img src="./img/imguserlogo.jpeg" alt="imagen de usuario" class="userimage"
-                        title="IMAGEN DE USUARIO" >
-                        <div class="userdates">
-                        Lucas Parra <br>
-                        [estudiante]
+                <div>
+                    <a href="./pages/perfil.html">
+                        <div title="ir a perfil">
+                            <img src="./img/imguserlogo.jpeg" alt="imagen de usuario" class="userimage"
+                            title="IMAGEN DE USUARIO" >
+                            <div>
+                            Lucas Parra <br>
+                            [estudiante]
+                            </div>
                         </div>
-                    </div>
-                
-                </a>
+                    
+                    </a>
+                </div>
                 <!-- menu -->
-                <button class="open_nav__menu" aria-label="abrir menu">
-                    <img src="./img/hamburger-icon.svg" alt="">
-                </button>
-                <ul class="nav__menu--ul">
-                    <button class="close_nav__menu" aria-label="cerrar menu">
-                        <img src="./img/close-icon.svg" alt="cerrar" title="cerrar">
-                    </button>
-                        <a href="./index.html">
-                            <li class="nav__menu--li" >INICIO</li>
-                        </a>
-                        <a href="./pages/proyectos.html">
-                            <li class="nav__menu--li">PROYECTOS</li>
-                        </a>   
-                        <a href="./pages/herramientas.html"> 
-                            <li class="nav__menu--li">HERRAMIENTAS</li>
-                        </a>
-                        <a href="./pages/contacto.html">
-                            <li class="nav__menu--li">CONTACTO</li>
-                        </a>
-                </ul>
+                <div >
+                    <span id="btnMenu">
+                        <i class="fas fa-bars fa-3x" ></i>
+                    </span>
+                    
+                    <ul id="menu">
+                        <a href="#"><li>inicio</li></a>
+                        <a href="#"><li>experiencia</li></a>
+                        <a href="#"><li>herramientas</li></a>
+                        <a href="#"><li>contacto</li></a>
+                    </ul>
+                </div>
+                
             </nav>
         </header>
         <main>
@@ -68,7 +64,7 @@
                     </div>
                 
                 
-                    <img src="./img/imgprueba.jpeg"  alt="imagen de section" width="300em">
+                    <img src="./img/imgprueba.jpeg"  alt="imagen de section" >
                 
             </section>
         </main>
