@@ -1,8 +1,121 @@
 @import "variables";
-
-body{
-    background-color: $colorBack;
+*{
+    margin: 0;
+    padding: 0;
     color: $colorText;
-    
+    list-style: none;
+    font-family: $fontPrin;
+}
+a{
+    text-decoration: none;
+}
+body{
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 100px auto 200px;
+    grid-template-areas: "header" 
+                         "main" 
+                         "footer" ;
+
+    @media #{$smartphone}{
+    }
+    @media #{$tablets}{
+    }   
+    @media #{$desktop}{
     }
 
+    header{
+        grid-area: header;
+        background-color: $colorPrin;
+        position: fixed;
+        margin: 0;
+        width: 100%;
+        height: 100px;
+        
+        nav{
+            
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 10px;
+
+            a{
+                div{
+                    img{
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        border: 4px solid #55443366;
+                        pointer-events: none;
+
+                    }
+                    div{
+
+                    }
+                }
+            }
+            button{
+                img{
+
+                }
+            }
+            ul{
+                button{
+                    img{
+
+                    }
+                }
+                a{
+                    li{
+
+                    }
+                }
+            }
+        }    
+    }
+    main{
+        grid-area: main ;
+        background-color: $colorSec;
+        padding: 25px;
+        
+        section{
+            display: flex;
+            flex-flow: column ;    
+            align-items: center;
+            justify-content: center;
+            h1{
+                text-align: center;
+            }
+            p{
+                text-align: center;
+            }
+            span{
+                text-align: center;
+            }
+            div{
+                display: flex;
+                justify-content: center;
+                
+                button{
+
+                }
+            }                    
+            img{
+
+            }            
+        }
+    
+    }
+    
+    footer{
+        grid-area: footer;
+        background-color: $colorTer;
+        
+        div{
+            padding: 25px;
+            text-align: center;
+            span{
+
+            }
+        }
+    }
+}
