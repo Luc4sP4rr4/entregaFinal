@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     
     <title>Document</title>
 </head>
@@ -48,51 +48,46 @@
                 
             </nav>
         </header>
-        <main id="experiencia">
-            <section >
-                <h1 >¿en que he trabajado?</h1>
-                <div >
-                    <p >
-                        en esta seccion voy a enseñarte algunos de los proyectos en los que he trabajado
-                    </p>                    
+        <main class="mainCenterPerfil">
+            <section class="mainCenter__editPerfil">
+                <div class="editPerfil__title">
+                    <h1 class="editTitle">
+                        configuracion de perfil
+                    </h1>
+                    <p class="editDescription">
+                        en esta seccion podras editar los datos de tu perfil
+                    </p>
                 </div>
-                
-                <div class="animate__animated animate__zoomIn" >
-                    <div >
-                        <img src="../PROYECTOS/PROYECTO_2/proyecto 1.jpg"  alt="...">
-                        <div >
-                          <h5 >portofolio</h5>
-                          <p >contenido para rellenar hasta que haya algo que poner</p>
-                          <a href="../index.html" ">ir al proyecto</a>
+                <div class="editPerfil_config">
+                    <form action="" method="post">
+                       <div>
+                            <label for="editName"> Edita tu Nombre </label>
+                           <input type="text" name="editName" id="editName" placeholder="Nuevo Nombre">
+                           
+                       </div>
+                       <div>
+                           <label for="editRange"> Edita tu Rango </label>
+                            <input type="text" name="editRange" id="editRange" placeholder="Nuevo Rango">
+                            
+                       </div>
+                       <div>
+                           <label for="perfilImg">Cargue su foto de perfil</label>
+                            <input type="file" name="perfilImg" id="perfilImg">
+                           
+                       </div>
+                        <div>
+                            <label for="cv">Cargue su CV</label>
+                            <input type="file" name="cv" id="cv">
+                            
                         </div>
-                    </div>
-                    <div >
-                        <img src="../PROYECTOS/FILO DULCE/img/Untitled.png"  alt="...">
-                        <div >
-                          <h5 >filo dulce</h5>
-                          <p >contenido para rellenar hasta que haya algo que poner</p>
-                          <a href="../PROYECTOS/FILO DULCE/index.html" ">ir al proyecto</a>
+                        <div class="perfilButtons">
+                            <input type="reset" value="restablecer valores" class="btn--config">
+                            <input type="submit" value="enviar" class="btn--config">
+                            
                         </div>
-                      </div>
-                      <div >
-                        <img src="../PROYECTOS/PROYECTO_2/proyecto 1.jpg"  alt="...">
-                        <div >
-                            <h5 >ejemplo</h5>
-                            <p >contenido para rellenar hasta que haya algo que poner</p>
-                            <a href="#" ">ir al proyecto</a>
-                        </div>
-                      </div>
-                      <div >
-                        <img src="../PROYECTOS/PROYECTO_2/proyecto 1.jpg"  alt="...">
-                        <div >
-                          <h5 >ejemplo</h5>
-                          <p >contenido para rellenar hasta que haya algo que poner</p>
-                          <a href="#" ">ir al proyecto</a>
-                        </div>
-                      </div>  
+                    </form>
                 </div>
             </section>
-           
         </main>
         <footer >
             <div >
@@ -100,7 +95,7 @@
             </div>
         </footer>
 
-    <script defer src="../js/hamburger.js"></script>
+    <script defer src="./js/hamburger.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

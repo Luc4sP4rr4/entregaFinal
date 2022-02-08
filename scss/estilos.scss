@@ -82,6 +82,7 @@ body{
                 }
             }
             //MENU
+            
             div{
                 position: relative;
                 display: flex;
@@ -129,6 +130,30 @@ body{
                         }
                     }
                 }
+                
+            }
+            @media #{$desktop}{
+                div{
+                    margin-top: 0;
+                    span{
+                        
+                        margin-top: 0;
+                        display: none;
+                        i{
+                            
+                        }
+                    }
+                    ul{
+                        margin:-40px 0 0 0;
+                        overflow: visible;
+                        a{
+                            display: inline-block;
+                            li{
+                                margin: 5px;
+                            }
+                        }
+                    }
+                }    
             }
         }
     }    
@@ -416,11 +441,12 @@ body{
 
                         }
                         div{
+                            
                             h5{
-
+                                color:$colorTextoSec;
                             }
                             p{
-
+                                color:$colorTextoSec;
                             }
                         }
                     }
@@ -428,4 +454,47 @@ body{
             }
         }
     }    
+}
+
+.mainCenterPerfil{
+    grid-area: main ;
+    background-color: $colorSec;
+    
+    
+    .mainCenter__editPerfil{
+        margin: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .editPerfil__title{
+            .editTitle{
+
+            }
+            .editDescription{
+
+            }
+        }
+        .editPerfil_config{
+            form{
+                display: flex;
+                flex-direction: column;
+                margin: 5px;
+                padding: 2px;
+                div{
+                    margin: 5px;
+                    padding: 5px;
+                    input{
+                        background-color: $colorForm;
+                    }
+                    label{
+                        width: 100px;
+                        text-align: center;
+                    }
+                }
+                .perfilButtons{
+                    text-align: center;
+                }
+            }
+        }
+    }
 }
