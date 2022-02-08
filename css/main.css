@@ -280,17 +280,26 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center; }
+    .mainCenterPerfil .mainCenter__editPerfil .editPerfil__title {
+      text-align: center; }
+      .mainCenterPerfil .mainCenter__editPerfil .editPerfil__title .editTitle {
+        text-transform: uppercase;
+        text-decoration: underline; }
+      .mainCenterPerfil .mainCenter__editPerfil .editPerfil__title .editDescription {
+        text-transform: uppercase; }
     .mainCenterPerfil .mainCenter__editPerfil .editPerfil_config form {
       display: flex;
       flex-direction: column;
       margin: 5px;
       padding: 2px; }
       .mainCenterPerfil .mainCenter__editPerfil .editPerfil_config form div {
+        height: 60px;
         margin: 5px;
         padding: 5px; }
         .mainCenterPerfil .mainCenter__editPerfil .editPerfil_config form div input {
           background-color: magenta; }
         .mainCenterPerfil .mainCenter__editPerfil .editPerfil_config form div label {
+          height: 40px;
           width: 100px;
           text-align: center; }
       .mainCenterPerfil .mainCenter__editPerfil .editPerfil_config form .perfilButtons {
