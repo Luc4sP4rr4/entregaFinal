@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <title>Document</title>
+</head>
+<body >
+    
+        <header>
+            <nav >
+                <!-- perfil -->
+                <div>
+                    <a href="../pages/perfil.html">
+                        <div title="ir a perfil">
+                            <img src="../img/imguserlogo.jpeg" alt="imagen de usuario" class="userimage"
+                            title="IMAGEN DE USUARIO" >
+                            <div>
+                            Lucas Parra <br>
+                            [estudiante]
+                            </div>
+                        </div>
+                    
+                    </a>
+                </div>
+                <!-- menu -->
+                <div >
+                    <span id="btnMenu">
+                        <i class="fas fa-bars fa-3x" ></i>
+                    </span>
+                    
+                    <ul id="menu">
+                        <a href="../index.html"><li>inicio</li></a>
+                        <a href="#"><li>experiencia</li></a>
+                        <a href="#"><li>herramientas</li></a>
+                        <a href="./contacto.html"><li>contacto</li></a>
+                    </ul>
+                </div>
+                
+            </nav>
+        </header>
+        <main id="contactos">
+            <section class="animate__animated animate__zoomIn">
+                
+                <div id="titulo">
+                    <h1>contactame!!</h1>
+                    <span>contacte por redes aqui</span>
+                    
+                </div>
+                <div id="redes" > 
+                    <div id="instagram">
+                        <a href="https://www.instagram.com/lparra_47/">
+                            <img src="../img/instagram-icon.svg"  alt="icono de instagram" title="icono de instagram">
+                        </a>
+                    </div>
+                    <div id="facebook">
+                        <a href="https://www.facebook.com/lucas.parra.106/">
+                            <img src="../img/facebook-icon.svg"  alt="icono de facebook" title="icono de facebook">
+                        </a>
+                    </div>
+                </div>
+                <div id="emailContac">
+                    <h3>contacte por email aqui</h3>
+                    <form action="" method="get" >
+                        <div >
+                            <label for="nombre"> NOMBRE</label>
+                            <input type="text" placeholder="Escriba su Nombre" name="nombre" class="formularioDivs__input">
+                        </div>
+                        <div>
+                            <label for="apellido">APELLIDO</label>
+                            <input type="text" placeholder="Escriba su Apellido" name="apellido" class="formularioDivs__input">
+                        </div>
+                        <div>
+                            <label for="edad">EDAD</label>
+                            <input type="date" name="edad" class="formularioDivs__input">
+                        </div>
+                        <div>
+                            <label for="email">EMAIL</label>
+                            <input type="email" name="email" placeholder="Escriba su Email" class="formularioDivs__input">
+                        </div>
+                        <div id="msjEmail">
+                            <label for="comentario">ESCRIBA <br> SU MENSAJE</label>
+                            <textarea name="comentario" placeholder="Escriba su Mensaje" class="formularioDivs__input--textarea"></textarea>
+                        </div>
+                        <div>
+                            
+                            <div >
+                                <input type="reset" value="restablecer valores" >
+                                <input type="submit" value="enviar" >
+                            
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer >
+            <div >
+                <span >todos los derechos reservados <br>copyright 2022</span>
+            </div>
+        </footer>
+
+    <script defer src="../js/hamburger.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -13,10 +13,11 @@ a{
 body{
     display: grid;
     min-height: 100vh;
-    grid-template-rows: 100px auto 200px;
+    grid-template-rows: 100px auto 100px;
     grid-template-areas: "header" 
                          "main" 
                          "footer" ;
+    
 
     @media #{$smartphone}{
     }
@@ -33,6 +34,7 @@ body{
         width: 100%;
         height: 100px;
         display: flex;
+        z-index: 1000;
         
         
         nav{
@@ -131,7 +133,7 @@ body{
         }
     }    
     
-    main{
+    #inicio{
         grid-area: main ;
         background-color: $colorSec;
         padding: 25px;
@@ -141,26 +143,41 @@ body{
             flex-flow: column ;    
             align-items: center;
             justify-content: center;
-            h1{
-                text-align: center;
+
+            @media #{$desktop}{
             }
-            p{
-                text-align: center;
-            }
-            span{
-                text-align: center;
-            }
+            div{
+                display: flex;
+                flex-direction: column;
+                h1{
+                    text-align: center;
+                }
+                p{
+                    text-align: center;
+                }
+                span{
+                    text-align: center;
+                }
+            }    
             div{
                 display: flex;
                 justify-content: center;
                 
                 button{
+                    color: $colorTextoSec;
+                    background-color: $colorTer;
+                    text-transform: uppercase;
+                    border: 3px solid;
+                    border-radius: 10px;
                     margin: 2em;
+                    padding: 10px;
                 }
             }                    
             img{
                 width: 250px;
                 margin: 2em;
+                border-radius: 50%;
+                border: 3px solid $colorTextoSec;
             }            
         }
     
@@ -170,11 +187,12 @@ body{
         grid-area: footer;
         background-color: $colorTer;
         
+        
         div{
             padding: 25px;
             text-align: center;
             span{
-
+                color: $colorTextoSec;
             }
         }
     }
@@ -187,4 +205,227 @@ body{
     margin-right: 0;
     pointer-events: all;
     overflow: visible;
+}
+//ESTILOS CONTACTO
+
+#contactos{
+    width: 100vw;
+    grid-area: main ;
+    background-color: $colorSec;
+    padding: 25px;
+    section{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        
+        //titulo
+        #titulo{
+            text-align: center;
+            h1{
+                text-transform: uppercase;
+                font-size: $tittleSize;
+            }
+            span{
+                text-transform: uppercase;
+            }
+
+        }
+        //redes
+        #redes{
+            
+            div{
+                               
+                a{
+                    img{
+                        width: 175px;
+                    }
+                }
+            }
+
+        }
+        //email
+        #emailContac{
+            display: flex;
+            flex-flow: column;
+            align-items: center
+            ;
+            h3{
+                text-transform: uppercase;
+
+            }
+            form{
+                
+                div{
+                    margin: 5px;
+                    padding: 2px;
+                    label{
+                        width: 100px;
+                        text-align: center;
+                        
+                    }
+                    input{
+                        background-color: $colorForm;
+                    }
+                }
+                #msjEmail{
+                    label{                 
+
+                    }
+                    textarea{
+                        background-color: $colorForm;
+                    }
+                }
+                div{
+                    
+                    div{
+                        text-align: center;
+                        
+                        input{
+
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+//ESTILOS EXPERIENCIA
+
+#experiencia{
+    grid-area: main ;
+        background-color: $colorSec;
+        
+    section{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        padding-top: 15px;
+
+        h1{
+            text-transform: uppercase;
+            text-align: center;
+        }
+        div{
+            p{
+                text-transform: uppercase;
+                text-align: center;
+            }
+        }
+        
+        div{
+            display: grid;
+            width: 100vw;
+            grid-template-columns: auto auto;
+            grid-auto-rows: auto auto;
+            margin: 15px;
+            justify-content: center;
+
+            @media #{$desktop}{
+                grid-template-columns: auto auto auto auto;
+                grid-auto-rows: auto;
+            }
+
+            div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 250px;
+                border: 3px solid;
+                border-radius: 10px;
+                background-color: $colorCard;
+
+                img{
+                    height: 175px;
+                    width: 100%;
+                    object-fit: cover;
+                    border-radius:10px ;
+
+                }
+                div{
+                    border: none;
+                    text-align: center;
+                    
+                    h5{
+                        color: $colorTextoSec;
+                        text-transform: uppercase;
+                    }
+                    p{
+                        color: $colorTextoSec;
+                        text-transform: uppercase;
+                    }
+                    a{
+                        background-color: $colorButton;
+                        text-decoration: none;
+                        color: $colorTextoSec;
+                        border-radius: 5px;
+                        padding: 10px;
+                        text-transform: uppercase;
+                        transition: 0.3s;
+                        &:hover{
+                            filter: brightness(130%);
+                        }
+                    }
+                }
+
+            }
+        }
+    } 
+}
+
+//ESTILOS HERRAMIENTAS
+
+#herramientas{
+    grid-area: main ;
+    background-color: $colorSec;
+    div{
+        margin: 10px;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        text-align: center;
+        div{
+            h1{
+                font-size: $tittleSize;
+                text-transform: uppercase;
+
+            }
+            p{
+                font-size: $textSize ;
+            }
+        }
+        div{
+            div{
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-auto-rows: auto;
+
+               
+                @media #{$desktop} {
+                    grid-template-columns: auto auto auto auto;
+                    
+                }
+
+                div{
+                    div{
+                        min-width: 10rem;
+                        max-width: fit-content;
+                        display: block;
+                        img{
+
+                        }
+                        div{
+                            h5{
+
+                            }
+                            p{
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }    
 }

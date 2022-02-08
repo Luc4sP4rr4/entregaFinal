@@ -11,7 +11,7 @@ a {
 body {
   display: grid;
   min-height: 100vh;
-  grid-template-rows: 100px auto 200px;
+  grid-template-rows: 100px auto 100px;
   grid-template-areas: "header"  "main"  "footer"; }
   body header {
     grid-area: header;
@@ -20,7 +20,8 @@ body {
     margin: 0;
     width: 100%;
     height: 100px;
-    display: flex; }
+    display: flex;
+    z-index: 1000; }
     body header nav {
       display: flex;
       justify-content: space-between;
@@ -85,37 +86,171 @@ body {
               background: #1a0554;
               text-align: center;
               text-transform: uppercase; }
-  body main {
+  body #inicio {
     grid-area: main;
     background-color: #664eae;
     padding: 25px; }
-    body main section {
+    body #inicio section {
       display: flex;
       flex-flow: column;
       align-items: center;
       justify-content: center; }
-      body main section h1 {
-        text-align: center; }
-      body main section p {
-        text-align: center; }
-      body main section span {
-        text-align: center; }
-      body main section div {
+      body #inicio section div {
+        display: flex;
+        flex-direction: column; }
+        body #inicio section div h1 {
+          text-align: center; }
+        body #inicio section div p {
+          text-align: center; }
+        body #inicio section div span {
+          text-align: center; }
+      body #inicio section div {
         display: flex;
         justify-content: center; }
-        body main section div button {
-          margin: 2em; }
-      body main section img {
+        body #inicio section div button {
+          color: #353535;
+          background-color: #c4abff;
+          text-transform: uppercase;
+          border: 3px solid;
+          border-radius: 10px;
+          margin: 2em;
+          padding: 10px; }
+      body #inicio section img {
         width: 250px;
-        margin: 2em; }
+        margin: 2em;
+        border-radius: 50%;
+        border: 3px solid #353535; }
   body footer {
     grid-area: footer;
     background-color: #c4abff; }
     body footer div {
       padding: 25px;
       text-align: center; }
+      body footer div span {
+        color: #353535; }
 
 .mostrarMenu {
   margin-right: 0;
   pointer-events: all;
   overflow: visible; }
+
+#contactos {
+  width: 100vw;
+  grid-area: main;
+  background-color: #664eae;
+  padding: 25px; }
+  #contactos section {
+    display: flex;
+    flex-flow: column;
+    align-items: center; }
+    #contactos section #titulo {
+      text-align: center; }
+      #contactos section #titulo h1 {
+        text-transform: uppercase;
+        font-size: 48px; }
+      #contactos section #titulo span {
+        text-transform: uppercase; }
+    #contactos section #redes div a img {
+      width: 175px; }
+    #contactos section #emailContac {
+      display: flex;
+      flex-flow: column;
+      align-items: center; }
+      #contactos section #emailContac h3 {
+        text-transform: uppercase; }
+      #contactos section #emailContac form div {
+        margin: 5px;
+        padding: 2px; }
+        #contactos section #emailContac form div label {
+          width: 100px;
+          text-align: center; }
+        #contactos section #emailContac form div input {
+          background-color: magenta; }
+      #contactos section #emailContac form #msjEmail textarea {
+        background-color: magenta; }
+      #contactos section #emailContac form div div {
+        text-align: center; }
+
+#experiencia {
+  grid-area: main;
+  background-color: #664eae; }
+  #experiencia section {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding-top: 15px; }
+    #experiencia section h1 {
+      text-transform: uppercase;
+      text-align: center; }
+    #experiencia section div p {
+      text-transform: uppercase;
+      text-align: center; }
+    #experiencia section div {
+      display: grid;
+      width: 100vw;
+      grid-template-columns: auto auto;
+      grid-auto-rows: auto auto;
+      margin: 15px;
+      justify-content: center; }
+      @media (min-width: 1024px) {
+        #experiencia section div {
+          grid-template-columns: auto auto auto auto;
+          grid-auto-rows: auto; } }
+      #experiencia section div div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 250px;
+        border: 3px solid;
+        border-radius: 10px;
+        background-color: #ddd; }
+        #experiencia section div div img {
+          height: 175px;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 10px; }
+        #experiencia section div div div {
+          border: none;
+          text-align: center; }
+          #experiencia section div div div h5 {
+            color: #353535;
+            text-transform: uppercase; }
+          #experiencia section div div div p {
+            color: #353535;
+            text-transform: uppercase; }
+          #experiencia section div div div a {
+            background-color: #9a90b6;
+            text-decoration: none;
+            color: #353535;
+            border-radius: 5px;
+            padding: 10px;
+            text-transform: uppercase;
+            transition: 0.3s; }
+            #experiencia section div div div a:hover {
+              filter: brightness(130%); }
+
+#herramientas {
+  grid-area: main;
+  background-color: #664eae; }
+  #herramientas div {
+    margin: 10px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center; }
+    #herramientas div div h1 {
+      font-size: 48px;
+      text-transform: uppercase; }
+    #herramientas div div p {
+      font-size: 18px; }
+    #herramientas div div div {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-auto-rows: auto; }
+      @media (min-width: 1024px) {
+        #herramientas div div div {
+          grid-template-columns: auto auto auto auto; } }
+      #herramientas div div div div div {
+        min-width: 10rem;
+        max-width: fit-content;
+        display: block; }

@@ -2,16 +2,18 @@
 $colorPrin: #1a0554;
 $colorSec:#664eae;
 $colorTer: #c4abff;
+$colorCard: #ddd;
+$colorButton: #9a90b6;
 $colorText: rgb(200, 200, 200);
 $colorTextoSec: #353535;
 $colorTittle:rgb(226, 226, 226);
-
+$colorForm: rgb(255, 0, 255);
 
 //MEDIDAS
 $tittleSize:48px;
 $textSize:18px;
 $smartphone:"(max-width: 480px)";
-$tablets:"(min-width: 480px) and (max-width: 728px)";
+$tablets:"(max-width: 728px) and (min-width: 480px)";
 $desktop:"(min-width: 1024px)";
 
 
