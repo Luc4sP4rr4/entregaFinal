@@ -1,7 +1,15 @@
+/* Color Theme Swatches in Hex */
+body header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 100%; }
+
 * {
   margin: 0;
   padding: 0;
-  color: #c8c8c8;
+  color: #aca5a5;
   list-style: none;
   font-family: "Roboto", sans-serif; }
 
@@ -15,93 +23,87 @@ body {
   grid-template-areas: "header"  "main"  "footer"; }
   body header {
     grid-area: header;
-    background-color: #1a0554;
+    background-color: #0D0D0D;
     position: fixed;
     margin: 0;
     width: 100%;
     height: 100px;
     display: flex;
     z-index: 1000; }
-    body header nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px;
-      width: 100%; }
-      body header nav div {
-        position: relative; }
-        body header nav div a div {
-          background-color: #c4abff;
+    body header nav div {
+      position: relative; }
+      body header nav div a div {
+        background-color: #BF9075;
+        padding: 2px;
+        margin: 2px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        transition: .2s; }
+        body header nav div a divafter, body header nav div a div:hover {
+          filter: brightness(85%); }
+        body header nav div a div img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          border: 4px solid #55443366;
+          pointer-events: none; }
+        body header nav div a div div {
           padding: 2px;
           margin: 2px;
-          border-radius: 10px;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          transition: .2s; }
-          body header nav div a divafter, body header nav div a div:hover {
-            filter: brightness(85%); }
-          body header nav div a div img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            border: 4px solid #55443366;
-            pointer-events: none; }
-          body header nav div a div div {
-            padding: 2px;
-            margin: 2px;
-            pointer-events: none;
-            color: black; }
-      body header nav div {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
+          pointer-events: none;
+          color: black; }
+    body header nav div {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      margin-top: 10px; }
+      body header nav div span {
+        pointer-events: all;
+        cursor: pointer;
         margin-top: 10px; }
+        body header nav div span i {
+          padding: 2px;
+          margin: 2px;
+          color: #BF9075; }
+      body header nav div ul {
+        height: 0;
+        margin: 20px -100% 0 0;
+        overflow: hidden;
+        transition: all 0.3s; }
+        body header nav div ul a {
+          text-decoration: none;
+          color: #aca5a5; }
+          body header nav div ul a li {
+            list-style: none;
+            padding: 20px;
+            margin: 5px;
+            border: 3px solid #BF9075;
+            border-radius: 50px;
+            display: block;
+            font-size: 1.25em;
+            cursor: pointer;
+            background: #0D0D0D;
+            text-align: center;
+            text-transform: uppercase; }
+    @media (min-width: 1024px) {
+      body header nav div {
+        margin-top: 0; }
         body header nav div span {
-          pointer-events: all;
-          cursor: pointer;
-          margin-top: 10px; }
-          body header nav div span i {
-            padding: 2px;
-            margin: 2px;
-            color: #c4abff; }
+          margin-top: 0;
+          display: none; }
         body header nav div ul {
-          height: 0;
-          margin: 20px -100% 0 0;
-          overflow: hidden;
-          transition: all 0.3s; }
+          margin: -40px 0 0 0;
+          overflow: visible; }
           body header nav div ul a {
-            text-decoration: none;
-            color: #c8c8c8; }
+            display: inline-block; }
             body header nav div ul a li {
-              list-style: none;
-              padding: 20px;
-              margin: 5px;
-              border: 3px solid #c4abff;
-              border-radius: 50px;
-              display: block;
-              font-size: 1.25em;
-              cursor: pointer;
-              background: #1a0554;
-              text-align: center;
-              text-transform: uppercase; }
-      @media (min-width: 1024px) {
-        body header nav div {
-          margin-top: 0; }
-          body header nav div span {
-            margin-top: 0;
-            display: none; }
-          body header nav div ul {
-            margin: -40px 0 0 0;
-            overflow: visible; }
-            body header nav div ul a {
-              display: inline-block; }
-              body header nav div ul a li {
-                margin: 5px; } }
+              margin: 5px; } }
   body #inicio {
     grid-area: main;
-    background-color: #664eae;
+    background-color: #402515;
     padding: 25px; }
     body #inicio section {
       display: flex;
@@ -121,8 +123,8 @@ body {
         display: flex;
         justify-content: center; }
         body #inicio section div button {
-          color: #353535;
-          background-color: #c4abff;
+          color: #272626;
+          background-color: #BF9075;
           text-transform: uppercase;
           border: 3px solid;
           border-radius: 10px;
@@ -132,15 +134,15 @@ body {
         width: 250px;
         margin: 2em;
         border-radius: 50%;
-        border: 3px solid #353535; }
+        border: 3px solid #272626; }
   body footer {
     grid-area: footer;
-    background-color: #c4abff; }
+    background-color: #BF9075; }
     body footer div {
       padding: 25px;
       text-align: center; }
       body footer div span {
-        color: #353535; }
+        color: #272626; }
 
 .mostrarMenu {
   margin-right: 0;
@@ -150,7 +152,7 @@ body {
 #contactos {
   width: 100vw;
   grid-area: main;
-  background-color: #664eae;
+  background-color: #402515;
   padding: 25px; }
   #contactos section {
     display: flex;
@@ -169,7 +171,7 @@ body {
       display: flex;
       flex-flow: column;
       align-items: center; }
-      #contactos section #emailContac h3 {
+      #contactos section #emailContac h2 {
         text-transform: uppercase; }
       #contactos section #emailContac form div {
         margin: 5px;
@@ -178,15 +180,15 @@ body {
           width: 100px;
           text-align: center; }
         #contactos section #emailContac form div input {
-          background-color: magenta; }
+          background-color: #D9B391; }
       #contactos section #emailContac form #msjEmail textarea {
-        background-color: magenta; }
+        background-color: #D9B391; }
       #contactos section #emailContac form div div {
         text-align: center; }
 
 #experiencia {
   grid-area: main;
-  background-color: #664eae; }
+  background-color: #402515; }
   #experiencia section {
     display: flex;
     flex-flow: column;
@@ -225,16 +227,16 @@ body {
         #experiencia section div div div {
           border: none;
           text-align: center; }
-          #experiencia section div div div h5 {
-            color: #353535;
+          #experiencia section div div div span {
+            color: #272626;
             text-transform: uppercase; }
           #experiencia section div div div p {
-            color: #353535;
+            color: #272626;
             text-transform: uppercase; }
           #experiencia section div div div a {
-            background-color: #9a90b6;
+            background-color: #D9B391;
             text-decoration: none;
-            color: #353535;
+            color: #272626;
             border-radius: 5px;
             padding: 10px;
             text-transform: uppercase;
@@ -244,7 +246,7 @@ body {
 
 #herramientas {
   grid-area: main;
-  background-color: #664eae; }
+  background-color: #402515; }
   #herramientas div {
     margin: 10px;
     display: flex;
@@ -267,14 +269,14 @@ body {
         min-width: 10rem;
         max-width: fit-content;
         display: block; }
-        #herramientas div div div div div div h5 {
-          color: #353535; }
+        #herramientas div div div div div div span {
+          color: #272626; }
         #herramientas div div div div div div p {
-          color: #353535; }
+          color: #272626; }
 
 .mainCenterPerfil {
   grid-area: main;
-  background-color: #664eae; }
+  background-color: #402515; }
   .mainCenterPerfil .mainCenter__editPerfil {
     margin: 40px;
     display: flex;
@@ -297,7 +299,8 @@ body {
         margin: 5px;
         padding: 5px; }
         .mainCenterPerfil .mainCenter__editPerfil .editPerfil_config form div input {
-          background-color: magenta; }
+          background-color: #D9B391;
+          color: #272626; }
         .mainCenterPerfil .mainCenter__editPerfil .editPerfil_config form div label {
           height: 40px;
           width: 100px;

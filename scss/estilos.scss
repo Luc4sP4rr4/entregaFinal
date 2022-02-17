@@ -1,4 +1,9 @@
-@import "variables";
+@import "./base/variables";
+@import "./base/extend";
+@import "./base/mapas";
+@import "./base/mixins";
+@import "./base/operaciones";
+
 *{
     margin: 0;
     padding: 0;
@@ -27,23 +32,19 @@ body{
     }
 
     header{
-        grid-area: header;
-        background-color: $colorPrin;
-        position: fixed;
-        margin: 0;
-        width: 100%;
-        height: 100px;
-        display: flex;
-        z-index: 1000;
+        grid-area: map-get($map: $header, $key:g-a );
+        background-color: map-get($map: $header, $key:bgc );
+        position: map-get($map: $header, $key:pos );
+        margin: map-get($map: $header, $key:m);
+        width: map-get($map: $header, $key:w );
+        height: map-get($map: $header, $key:h );
+        display: map-get($map: $header, $key:df );
+        z-index: map-get($map: $header, $key:z );
         
         
         nav{
             
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            width: 100%;
+            @extend %navDelHeader;
 
             div{
                 position: relative;
@@ -65,11 +66,7 @@ body{
                     
                         }
                         img{
-                            width: 50px;
-                            height: 50px;
-                            border-radius: 50%;
-                            border: 4px solid #55443366;
-                            pointer-events: none;
+                            @include imgPerfil
 
                         }   
                         div{
@@ -274,7 +271,7 @@ body{
             flex-flow: column;
             align-items: center
             ;
-            h3{
+            h2{
                 text-transform: uppercase;
 
             }
@@ -372,7 +369,7 @@ body{
                     border: none;
                     text-align: center;
                     
-                    h5{
+                    span{
                         color: $colorTextoSec;
                         text-transform: uppercase;
                     }
@@ -442,7 +439,7 @@ body{
                         }
                         div{
                             
-                            h5{
+                            span{
                                 color:$colorTextoSec;
                             }
                             p{
@@ -490,7 +487,7 @@ body{
                     
                     input{
                         background-color: $colorForm;
-                        
+                        color: $colorTextoSec;
                     }
                     label{
                         height: 40px;
