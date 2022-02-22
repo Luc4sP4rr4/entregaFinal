@@ -1,10 +1,91 @@
 /* Color Theme Swatches in Hex */
-body header nav {
+header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
   width: 100%; }
+
+header {
+  grid-area: header;
+  background-color: #0D0D0D;
+  position: fixed;
+  margin: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  z-index: 1000; }
+  header nav div {
+    position: relative; }
+    header nav div a div {
+      background-color: #BF9075;
+      padding: 2px;
+      margin: 2px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      transition: .2s; }
+      header nav div a divafter, header nav div a div:hover {
+        filter: brightness(85%); }
+      header nav div a div img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 4px solid #55443366;
+        pointer-events: none; }
+      header nav div a div div {
+        padding: 2px;
+        margin: 2px;
+        pointer-events: none;
+        color: black; }
+  header nav div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 10px; }
+    header nav div span {
+      pointer-events: all;
+      cursor: pointer;
+      margin-top: 10px; }
+      header nav div span i {
+        padding: 2px;
+        margin: 2px;
+        color: #BF9075; }
+    header nav div ul {
+      height: 0;
+      margin: 20px -100% 0 0;
+      overflow: hidden;
+      transition: all 0.3s; }
+      header nav div ul a {
+        text-decoration: none;
+        color: #aca5a5; }
+        header nav div ul a li {
+          list-style: none;
+          padding: 20px;
+          margin: 5px;
+          border: 3px solid #BF9075;
+          border-radius: 50px;
+          display: block;
+          font-size: 1.25em;
+          cursor: pointer;
+          background: #0D0D0D;
+          text-align: center;
+          text-transform: uppercase; }
+  @media (min-width: 1024px) {
+    header nav div {
+      margin-top: 0; }
+      header nav div span {
+        margin-top: 0;
+        display: none; }
+      header nav div ul {
+        margin: -40px 0 0 0;
+        overflow: visible; }
+        header nav div ul a {
+          display: inline-block; }
+          header nav div ul a li {
+            margin: 5px; } }
 
 * {
   margin: 0;
@@ -21,86 +102,6 @@ body {
   min-height: 100vh;
   grid-template-rows: 100px auto 100px;
   grid-template-areas: "header"  "main"  "footer"; }
-  body header {
-    grid-area: header;
-    background-color: #0D0D0D;
-    position: fixed;
-    margin: 0;
-    width: 100%;
-    height: 100px;
-    display: flex;
-    z-index: 1000; }
-    body header nav div {
-      position: relative; }
-      body header nav div a div {
-        background-color: #BF9075;
-        padding: 2px;
-        margin: 2px;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        transition: .2s; }
-        body header nav div a divafter, body header nav div a div:hover {
-          filter: brightness(85%); }
-        body header nav div a div img {
-          width: 50px;
-          height: 50px;
-          border-radius: 50%;
-          border: 4px solid #55443366;
-          pointer-events: none; }
-        body header nav div a div div {
-          padding: 2px;
-          margin: 2px;
-          pointer-events: none;
-          color: black; }
-    body header nav div {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      margin-top: 10px; }
-      body header nav div span {
-        pointer-events: all;
-        cursor: pointer;
-        margin-top: 10px; }
-        body header nav div span i {
-          padding: 2px;
-          margin: 2px;
-          color: #BF9075; }
-      body header nav div ul {
-        height: 0;
-        margin: 20px -100% 0 0;
-        overflow: hidden;
-        transition: all 0.3s; }
-        body header nav div ul a {
-          text-decoration: none;
-          color: #aca5a5; }
-          body header nav div ul a li {
-            list-style: none;
-            padding: 20px;
-            margin: 5px;
-            border: 3px solid #BF9075;
-            border-radius: 50px;
-            display: block;
-            font-size: 1.25em;
-            cursor: pointer;
-            background: #0D0D0D;
-            text-align: center;
-            text-transform: uppercase; }
-    @media (min-width: 1024px) {
-      body header nav div {
-        margin-top: 0; }
-        body header nav div span {
-          margin-top: 0;
-          display: none; }
-        body header nav div ul {
-          margin: -40px 0 0 0;
-          overflow: visible; }
-          body header nav div ul a {
-            display: inline-block; }
-            body header nav div ul a li {
-              margin: 5px; } }
   body #inicio {
     grid-area: main;
     background-color: #402515;
@@ -143,167 +144,166 @@ body {
       text-align: center; }
       body footer div span {
         color: #272626; }
-
-.mostrarMenu {
-  margin-right: 0;
-  pointer-events: all;
-  overflow: visible; }
-
-#contactos {
-  width: 100vw;
-  grid-area: main;
-  background-color: #402515;
-  padding: 25px; }
-  #contactos section {
-    display: flex;
-    flex-flow: column;
-    align-items: center; }
-    #contactos section #titulo {
-      text-align: center; }
-      #contactos section #titulo h1 {
-        text-transform: uppercase;
-        font-size: 48px; }
-      #contactos section #titulo span {
-        text-transform: uppercase; }
-    #contactos section #redes div a img {
-      width: 175px; }
-    #contactos section #emailContac {
+  body .mostrarMenu {
+    margin-right: 0;
+    pointer-events: all;
+    overflow: visible; }
+  body #contactos {
+    width: 100vw;
+    grid-area: main;
+    background-color: #402515;
+    padding: 25px; }
+    body #contactos section {
       display: flex;
       flex-flow: column;
       align-items: center; }
-      #contactos section #emailContac h2 {
-        text-transform: uppercase; }
-      #contactos section #emailContac form div {
-        margin: 5px;
-        padding: 2px; }
-        #contactos section #emailContac form div label {
-          width: 100px;
-          text-align: center; }
-        #contactos section #emailContac form div input {
-          background-color: #D9B391; }
-      #contactos section #emailContac form #msjEmail textarea {
-        background-color: #D9B391; }
-      #contactos section #emailContac form div div {
+      body #contactos section #titulo {
         text-align: center; }
-
-#experiencia {
-  grid-area: main;
-  background-color: #402515; }
-  #experiencia section {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    padding-top: 15px; }
-    #experiencia section h1 {
-      text-transform: uppercase;
-      text-align: center; }
-    #experiencia section div p {
-      text-transform: uppercase;
-      text-align: center; }
-    #experiencia section div {
-      display: grid;
-      width: 100vw;
-      grid-template-columns: auto auto;
-      grid-auto-rows: auto auto;
-      margin: 15px;
-      justify-content: center; }
-      @media (min-width: 1024px) {
-        #experiencia section div {
-          grid-template-columns: auto auto auto auto;
-          grid-auto-rows: auto; } }
-      #experiencia section div div {
+        body #contactos section #titulo h1 {
+          text-transform: uppercase;
+          font-size: 48px; }
+        body #contactos section #titulo span {
+          text-transform: uppercase; }
+      body #contactos section #redes div a img {
+        width: 175px; }
+      body #contactos section #emailContac {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 250px;
-        border: 3px solid;
-        border-radius: 10px;
-        background-color: #ddd; }
-        #experiencia section div div img {
-          height: 175px;
-          width: 100%;
-          object-fit: cover;
-          border-radius: 10px; }
-        #experiencia section div div div {
-          border: none;
+        flex-flow: column;
+        align-items: center; }
+        body #contactos section #emailContac h2 {
+          text-transform: uppercase; }
+        body #contactos section #emailContac form div {
+          margin: 5px;
+          padding: 2px; }
+          body #contactos section #emailContac form div label {
+            width: 100px;
+            text-align: center; }
+          body #contactos section #emailContac form div input {
+            background-color: #D9B391; }
+        body #contactos section #emailContac form #msjEmail textarea {
+          background-color: #D9B391; }
+        body #contactos section #emailContac form div div {
           text-align: center; }
-          #experiencia section div div div span {
-            color: #272626;
-            text-transform: uppercase; }
-          #experiencia section div div div p {
-            color: #272626;
-            text-transform: uppercase; }
-          #experiencia section div div div a {
-            background-color: #D9B391;
-            text-decoration: none;
-            color: #272626;
-            border-radius: 5px;
-            padding: 10px;
-            text-transform: uppercase;
-            transition: 0.3s; }
-            #experiencia section div div div a:hover {
-              filter: brightness(130%); }
-
-#herramientas {
-  grid-area: main;
-  background-color: #402515; }
-  #herramientas div {
-    margin: 10px;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    text-align: center; }
-    #herramientas div div h1 {
-      font-size: 48px;
-      text-transform: uppercase; }
-    #herramientas div div p {
-      font-size: 18px; }
-    #herramientas div div div {
-      display: grid;
-      grid-template-columns: auto auto;
-      grid-auto-rows: auto; }
-      @media (min-width: 1024px) {
-        #herramientas div div div {
-          grid-template-columns: auto auto auto auto; } }
-      #herramientas div div div div div {
-        min-width: 10rem;
-        max-width: fit-content;
-        display: block; }
-        #herramientas div div div div div div span {
-          color: #272626; }
-        #herramientas div div div div div div p {
-          color: #272626; }
-
-.mainCenterPerfil {
-  grid-area: main;
-  background-color: #402515; }
-  .mainCenterPerfil .mainCenter__editPerfil {
-    margin: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
-    .mainCenterPerfil .mainCenter__editPerfil .editPerfil__title {
-      text-align: center; }
-      .mainCenterPerfil .mainCenter__editPerfil .editPerfil__title .editTitle {
+  body #experiencia {
+    grid-area: main;
+    background-color: #402515;
+    width: 100vw; }
+    body #experiencia section {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      padding-top: 15px; }
+      body #experiencia section h1 {
         text-transform: uppercase;
-        text-decoration: underline; }
-      .mainCenterPerfil .mainCenter__editPerfil .editPerfil__title .editDescription {
+        text-align: center; }
+      body #experiencia section div p {
+        text-transform: uppercase;
+        text-align: center; }
+      body #experiencia section div {
+        display: grid;
+        width: 100vw;
+        grid-template-columns: auto auto;
+        grid-auto-rows: auto auto;
+        margin: 15px;
+        justify-content: center; }
+        @media (min-width: 1024px) {
+          body #experiencia section div {
+            grid-template-columns: auto auto auto auto;
+            grid-auto-rows: auto; } }
+        body #experiencia section div div {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 250px;
+          border: 3px solid;
+          border-radius: 10px;
+          background-color: #ddd; }
+          body #experiencia section div div img {
+            height: 175px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px; }
+          body #experiencia section div div div {
+            border: none;
+            text-align: center; }
+            body #experiencia section div div div span {
+              color: #272626;
+              text-transform: uppercase; }
+            body #experiencia section div div div p {
+              color: #272626;
+              text-transform: uppercase; }
+            body #experiencia section div div div a {
+              background-color: #D9B391;
+              text-decoration: none;
+              color: #272626;
+              border-radius: 5px;
+              padding: 10px;
+              text-transform: uppercase;
+              transition: 0.3s; }
+              body #experiencia section div div div a:hover {
+                filter: brightness(130%); }
+  body #herramientas {
+    grid-area: main;
+    background-color: #402515; }
+    body #herramientas div {
+      margin: 10px;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      text-align: center; }
+      body #herramientas div div h1 {
+        font-size: 48px;
         text-transform: uppercase; }
-    .mainCenterPerfil .mainCenter__editPerfil .editPerfil_config form {
+      body #herramientas div div p {
+        font-size: 18px; }
+      body #herramientas div div div {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-auto-rows: auto; }
+        @media (min-width: 768px) {
+          body #herramientas div div div {
+            grid-template-columns: auto auto auto; } }
+        @media (min-width: 1024px) {
+          body #herramientas div div div {
+            grid-template-columns: auto auto auto auto; } }
+        body #herramientas div div div div div {
+          min-width: 10rem;
+          max-width: fit-content;
+          display: block; }
+          body #herramientas div div div div div div span {
+            color: #272626; }
+          body #herramientas div div div div div div p {
+            color: #272626; }
+  body .mainCenterPerfil {
+    grid-area: main;
+    background-color: #402515; }
+    body .mainCenterPerfil .mainCenter__editPerfil {
+      margin: 40px;
       display: flex;
       flex-direction: column;
-      margin: 5px;
-      padding: 2px; }
-      .mainCenterPerfil .mainCenter__editPerfil .editPerfil_config form div {
-        height: 60px;
-        margin: 5px;
-        padding: 5px; }
-        .mainCenterPerfil .mainCenter__editPerfil .editPerfil_config form div input {
-          background-color: #D9B391;
-          color: #272626; }
-        .mainCenterPerfil .mainCenter__editPerfil .editPerfil_config form div label {
-          height: 40px;
-          width: 100px;
-          text-align: center; }
-      .mainCenterPerfil .mainCenter__editPerfil .editPerfil_config form .perfilButtons {
+      align-items: center; }
+      body .mainCenterPerfil .mainCenter__editPerfil .editPerfil__title {
         text-align: center; }
+        body .mainCenterPerfil .mainCenter__editPerfil .editPerfil__title .editTitle {
+          text-transform: uppercase;
+          text-decoration: underline; }
+        body .mainCenterPerfil .mainCenter__editPerfil .editPerfil__title .editDescription {
+          text-transform: uppercase; }
+      body .mainCenterPerfil .mainCenter__editPerfil .editPerfil_config form {
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
+        padding: 2px; }
+        body .mainCenterPerfil .mainCenter__editPerfil .editPerfil_config form div {
+          height: 60px;
+          margin: 5px;
+          padding: 5px; }
+          body .mainCenterPerfil .mainCenter__editPerfil .editPerfil_config form div input {
+            background-color: #D9B391;
+            color: #272626; }
+          body .mainCenterPerfil .mainCenter__editPerfil .editPerfil_config form div label {
+            height: 40px;
+            width: 100px;
+            text-align: center; }
+        body .mainCenterPerfil .mainCenter__editPerfil .editPerfil_config form .perfilButtons {
+          text-align: center; }

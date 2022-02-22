@@ -3,7 +3,7 @@
 @import "./base/mapas";
 @import "./base/mixins";
 @import "./base/operaciones";
-
+@import "./components/header";
 *{
     margin: 0;
     padding: 0;
@@ -21,140 +21,7 @@ body{
     grid-template-rows: 100px auto 100px;
     grid-template-areas: "header" 
                          "main" 
-                         "footer" ;
-    
-
-    @media #{$smartphone}{
-    }
-    @media #{$tablets}{
-    }   
-    @media #{$desktop}{
-    }
-
-    header{
-        grid-area: map-get($map: $header, $key:g-a );
-        background-color: map-get($map: $header, $key:bgc );
-        position: map-get($map: $header, $key:pos );
-        margin: map-get($map: $header, $key:m);
-        width: map-get($map: $header, $key:w );
-        height: map-get($map: $header, $key:h );
-        display: map-get($map: $header, $key:df );
-        z-index: map-get($map: $header, $key:z );
-        
-        
-        nav{
-            
-            @extend %navDelHeader;
-
-            div{
-                position: relative;
-                a{
-                
-                    div{
-                        background-color: $colorTer;
-                        padding: 2px;
-                        margin: 2px;
-                        border-radius: 10px;
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center;
-                        transition: .2s;
-                        &after,
-                        &:hover{
-                            filter: brightness(85%);
-                        
-                    
-                        }
-                        img{
-                            @include imgPerfil
-
-                        }   
-                        div{
-                        padding: 2px;
-                        margin: 2px;
-                        pointer-events: none;
-                        color:black
-                        }
-                    }
-                }
-            }
-            //MENU
-            
-            div{
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-end;
-                margin-top: 10px;
-                
-                span{
-                    pointer-events: all;
-                    cursor: pointer; 
-                    margin-top: 10px;
-                    
-
-                    i{
-                        padding: 2px;
-                        margin: 2px;
-                        color:$colorTer ;
-                    }
-                }          
-                ul{
-                    
-                    height: 0;
-                    margin:20px -100% 0 0 ;             
-                    overflow: hidden;
-                    transition: all 0.3s;
-                    
-                    a{
-            
-                        text-decoration: none;
-                        color: $colorText;
-                            
-                        
-                        li{
-                            list-style: none;
-                            padding: 20px;
-                            margin: 5px;
-                            border: 3px solid $colorTer;
-                            border-radius: 50px;
-                            display: block;
-                            font-size: 1.25em;
-                            cursor: pointer;
-                            background: $colorPrin;
-                            text-align: center;
-                            text-transform: uppercase;
-                        }
-                    }
-                }
-                
-            }
-            @media #{$desktop}{
-                div{
-                    margin-top: 0;
-                    span{
-                        
-                        margin-top: 0;
-                        display: none;
-                        i{
-                            
-                        }
-                    }
-                    ul{
-                        margin:-40px 0 0 0;
-                        overflow: visible;
-                        a{
-                            display: inline-block;
-                            li{
-                                margin: 5px;
-                            }
-                        }
-                    }
-                }    
-            }
-        }
-    }    
-    
+                         "footer" ;  
     #inicio{
         grid-area: main ;
         background-color: $colorSec;
@@ -166,7 +33,7 @@ body{
             align-items: center;
             justify-content: center;
 
-            @media #{$desktop}{
+            @media (min-width: $breakpoint-desktop){
             }
             div{
                 display: flex;
@@ -220,7 +87,7 @@ body{
     }
 
 
-}
+
 //Clases extras
 
 .mostrarMenu{
@@ -317,7 +184,8 @@ body{
 
 #experiencia{
     grid-area: main ;
-        background-color: $colorSec;
+    background-color: $colorSec;
+    width: 100vw;
         
     section{
         display: flex;
@@ -344,7 +212,7 @@ body{
             margin: 15px;
             justify-content: center;
 
-            @media #{$desktop}{
+            @media (min-width: $breakpoint-desktop){
                 grid-template-columns: auto auto auto auto;
                 grid-auto-rows: auto;
             }
@@ -423,8 +291,11 @@ body{
                 grid-template-columns: auto auto;
                 grid-auto-rows: auto;
 
-               
-                @media #{$desktop} {
+                @media (min-width: $breakpoint-tablet) {
+                    grid-template-columns: auto auto auto;
+                    
+                }
+                @media (min-width: $breakpoint-desktop) {
                     grid-template-columns: auto auto auto auto;
                     
                 }
@@ -501,4 +372,5 @@ body{
             }
         }
     }
+}
 }
