@@ -15,7 +15,7 @@ header{
         @extend %navDelHeader;
 
         div{
-            position: relative;
+            
             a{
             
                 div{
@@ -27,6 +27,8 @@ header{
                     flex-direction: row;
                     align-items: center;
                     transition: .2s;
+                    width: 150px;
+                    height: 60px;
                     &after,
                     &:hover{
                         filter: brightness(85%);
@@ -92,6 +94,7 @@ header{
                         background: $colorPrin;
                         text-align: center;
                         text-transform: uppercase;
+                        color: $colorTextoSec;
                     }
                 }
             }

@@ -4,24 +4,13 @@
 @import "./base/mixins";
 @import "./base/operaciones";
 @import "./components/header";
-*{
-    margin: 0;
-    padding: 0;
-    color: $colorText;
-    list-style: none;
-    font-family: $fontPrin;
-}
-a{
-    text-decoration: none;
-}
+@import "./components/footer";
+@import "./components/layout";
+@import "./base/reset";
+
 
 body{
-    display: grid;
-    min-height: 100vh;
-    grid-template-rows: 100px auto 100px;
-    grid-template-areas: "header" 
-                         "main" 
-                         "footer" ;  
+    
     #inicio{
         grid-area: main ;
         background-color: $colorSec;
@@ -53,7 +42,7 @@ body{
                 justify-content: center;
                 
                 button{
-                    color: $colorTextoSec;
+                    color: $colorText;
                     background-color: $colorTer;
                     text-transform: uppercase;
                     border: 3px solid;
@@ -72,19 +61,7 @@ body{
     
     }
     
-    footer{
-        grid-area: footer;
-        background-color: $colorTer;
-        
-        
-        div{
-            padding: 25px;
-            text-align: center;
-            span{
-                color: $colorTextoSec;
-            }
-        }
-    }
+   
 
 
 
@@ -121,7 +98,17 @@ body{
         }
         //redes
         #redes{
-            
+            display: flex;
+            flex-flow: column;
+            @media (min-width: $breakpoint-tablet) {
+               flex-flow: row;     
+                    
+            }
+            @media (min-width: $breakpoint-desktop) {
+                flex-flow: row;
+                
+            }
+
             div{
                                
                 a{
@@ -129,6 +116,7 @@ body{
                         width: 175px;
                     }
                 }
+               
             }
 
         }
@@ -207,11 +195,15 @@ body{
         div{
             display: grid;
             width: 100vw;
-            grid-template-columns: auto auto;
-            grid-auto-rows: auto auto;
+            grid-template-columns: auto;
+            grid-auto-rows: auto;
             margin: 15px;
             justify-content: center;
 
+            @media (min-width: $breakpoint-tablet) {
+                grid-template-columns: auto auto auto;
+                
+            }
             @media (min-width: $breakpoint-desktop){
                 grid-template-columns: auto auto auto auto;
                 grid-auto-rows: auto;
@@ -236,19 +228,20 @@ body{
                 div{
                     border: none;
                     text-align: center;
+                    background: none;
                     
                     span{
-                        color: $colorTextoSec;
+                        color: $colorText;
                         text-transform: uppercase;
                     }
                     p{
-                        color: $colorTextoSec;
+                        color: $colorText;
                         text-transform: uppercase;
                     }
                     a{
                         background-color: $colorButton;
                         text-decoration: none;
-                        color: $colorTextoSec;
+                        color: $colorText;
                         border-radius: 5px;
                         padding: 10px;
                         text-transform: uppercase;
@@ -311,10 +304,10 @@ body{
                         div{
                             
                             span{
-                                color:$colorTextoSec;
+                                color:$colorText;
                             }
                             p{
-                                color:$colorTextoSec;
+                                color:$colorText;
                             }
                         }
                     }
@@ -323,6 +316,9 @@ body{
         }
     }    
 }
+
+
+// ESTILOS DATOS DEL PERFIL
 
 .mainCenterPerfil{
     grid-area: main ;
@@ -355,19 +351,33 @@ body{
                     height: 60px;
                     margin: 5px;
                     padding: 5px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
                     
                     input{
+                        height: 30em ;
                         background-color: $colorForm;
-                        color: $colorTextoSec;
+                        color: $colorText;
+                        width: 100%;
                     }
                     label{
-                        height: 40px;
-                        width: 100px;
+                        height: 3em;
+                        
                         text-align: center;
                     }
                 }
                 .perfilButtons{
-                    text-align: center;
+                    input{
+                        color: $colorText;
+                        background-color: $colorTer;
+                        text-transform: uppercase;
+                        border: 3px solid;
+                        border-radius: 10px;
+                        margin: 1em;
+                        padding: 10px;
+                    }
+                    
                 }
             }
         }

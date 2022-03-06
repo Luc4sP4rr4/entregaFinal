@@ -1,0 +1,13 @@
+footer{
+    grid-area: footer;
+    background-color: $colorTer;
+    
+    
+    div{
+        padding: 25px;
+        text-align: center;
+        span{
+            color: $colorText;
+        }
+    }
+}
