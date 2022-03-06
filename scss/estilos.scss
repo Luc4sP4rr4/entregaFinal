@@ -281,7 +281,7 @@ body{
         div{
             div{
                 display: grid;
-                grid-template-columns: auto auto;
+                grid-template-columns: auto ;
                 grid-auto-rows: auto;
 
                 @media (min-width: $breakpoint-tablet) {

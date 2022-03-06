@@ -277,7 +277,7 @@ body #herramientas {
       font-size: 18px; }
     body #herramientas div div div {
       display: grid;
-      grid-template-columns: auto auto;
+      grid-template-columns: auto;
       grid-auto-rows: auto; }
       @media (min-width: 768px) {
         body #herramientas div div div {
