@@ -1,9 +1,24 @@
 body{
     display: grid;
-    width: 100%;
+    
     min-height: 100vh;
     grid-template-rows: 100px auto 100px;
-    grid-template-areas: "header" 
+    grid-template-areas: "heade" 
                          "main" 
                          "footer" ; 
+
+
+    header{
+        grid-area: heade;
+        
+    }
+    main{
+        grid-area: main;
+        height: 100%;
+
+    }
+    footer{
+        grid-area: footer;
+        
+    }
 }

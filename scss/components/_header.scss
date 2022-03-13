@@ -1,6 +1,6 @@
 @import "../base/mapas";
 header{
-    grid-area: map-get($map: $header, $key:g-a );
+    
     background-color: map-get($map: $header, $key:bgc );
     position: map-get($map: $header, $key:pos );
     margin: map-get($map: $header, $key:m);
@@ -61,18 +61,19 @@ header{
                 pointer-events: all;
                 cursor: pointer; 
                 margin-top: 10px;
-                
+                align-items:center;
 
                 i{
+                    
                     padding: 2px;
                     margin: 2px;
                     color:$colorTer ;
                 }
             }          
             ul{
-                
+                position: absolute;
                 height: 0;
-                margin:20px -100% 0 0 ;             
+                margin:75px -100% 0 0 ;             
                 overflow: hidden;
                 transition: all 0.3s;
                 
@@ -103,6 +104,7 @@ header{
         @media (min-width: $breakpoint-desktop){
             div{
                 margin-top: 0;
+                flex-direction: row;
                 span{
                     
                     margin-top: 0;
@@ -112,7 +114,8 @@ header{
                     }
                 }
                 ul{
-                    margin:-40px 0 0 0;
+                    position: relative;
+                    margin:0 0 80px 0;
                     overflow: visible;
                     a{
                         display: inline-block;
