@@ -228,12 +228,14 @@ body{
                 flex-direction: column;
                 align-items: center;
                 width: 250px;
+                height: 350px;
                 border: 3px solid;
                 border-radius: 10px;
                 background-color: $colorCard;
 
                 img{
-                    height: 60%;
+                    margin-top: 0;
+                    height: 175px;
                     width: 100%;
                     object-fit: cover;
                     border-radius:10px ;
@@ -244,7 +246,7 @@ body{
                     text-align: center;
                     background: none;
                     height: 40%;
-                    
+                    padding: .5em;
                     span{
                         color: $colorText;
                         text-transform: uppercase;
