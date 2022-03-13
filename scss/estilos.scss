@@ -279,7 +279,7 @@ body{
     background-color: $colorSec;
     width: 100vw;
     div{
-        margin: 10px;
+        margin: 0 0 2em 0;
         display: flex;
         flex-flow: column;
         align-items: center;
@@ -295,10 +295,13 @@ body{
             }
         }
         div{
+            
             div{
                 display: grid;
                 grid-template-columns: auto ;
                 grid-auto-rows: auto;
+                
+                
 
                 @media (min-width: $breakpoint-tablet) {
                     grid-template-columns: auto auto auto;
@@ -311,7 +314,8 @@ body{
 
                 div{
                     div{
-                        height: 21rem;
+                        margin: 1em;
+                        height: 23rem;
                         min-width: 10rem;
                         max-width: fit-content;
                         display: block;

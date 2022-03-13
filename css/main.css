@@ -294,7 +294,7 @@ body #herramientas {
   background-color: #e6e6e6;
   width: 100vw; }
   body #herramientas div {
-    margin: 10px;
+    margin: 0 0 2em 0;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -315,7 +315,8 @@ body #herramientas {
         body #herramientas div div div {
           grid-template-columns: auto auto auto auto; } }
       body #herramientas div div div div div {
-        height: 21rem;
+        margin: 1em;
+        height: 23rem;
         min-width: 10rem;
         max-width: fit-content;
         display: block; }
