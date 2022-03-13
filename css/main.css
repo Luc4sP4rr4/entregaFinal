@@ -256,6 +256,7 @@ body #experiencia {
           grid-template-columns: auto auto auto auto;
           grid-auto-rows: auto; } }
       body #experiencia section div div {
+        transition: .5s;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -264,6 +265,8 @@ body #experiencia {
         border: 3px solid;
         border-radius: 10px;
         background-color: #ddd; }
+        body #experiencia section div div:hover {
+          transform: scale(1.1); }
         body #experiencia section div div img {
           margin-top: 0;
           height: 175px;
@@ -275,7 +278,8 @@ body #experiencia {
           text-align: center;
           background: none;
           height: 40%;
-          padding: .5em; }
+          padding: .5em;
+          transform: none; }
           body #experiencia section div div div span {
             color: #1a1a1a;
             text-transform: uppercase; }
@@ -302,11 +306,13 @@ body #herramientas {
     flex-flow: column;
     align-items: center;
     text-align: center; }
-    body #herramientas div div h1 {
-      font-size: 48px;
-      text-transform: uppercase; }
-    body #herramientas div div p {
-      font-size: 18px; }
+    body #herramientas div div {
+      margin: 1em; }
+      body #herramientas div div h1 {
+        font-size: 48px;
+        text-transform: uppercase; }
+      body #herramientas div div p {
+        font-size: 18px; }
     body #herramientas div div div {
       display: grid;
       grid-template-columns: auto;
@@ -318,15 +324,19 @@ body #herramientas {
         body #herramientas div div div {
           grid-template-columns: auto auto auto auto; } }
       body #herramientas div div div div div {
+        transition: .5s;
         margin: 1em;
         height: 23rem;
         min-width: 10rem;
         max-width: fit-content;
         display: block; }
+        body #herramientas div div div div div:hover {
+          transform: scale(1.1); }
         body #herramientas div div div div div div span {
           color: #1a1a1a; }
         body #herramientas div div div div div div p {
-          color: #1a1a1a; }
+          color: #1a1a1a;
+          transform: none; }
 
 body .mainCenterPerfil {
   grid-area: main;
